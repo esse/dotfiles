@@ -17,6 +17,9 @@ export WKHTMLTOPDF_PATH="/Users/esse/.rvm/gems/ruby-2.2.0@koleo/bin/wkhtmltopdf"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# colors inside GREP
+export GREP_OPTIONS='—color=auto'
+
 ponysay -q
 source /Users/esse/.rvm/scripts/rvm
 source ~/.profile
