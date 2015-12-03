@@ -1,0 +1,13 @@
+.vim/.netrwhist
+.vim/plugin/blog_settings.txt
+.vim/passwords.vim
+.DS_Store
+*.swp
+*.swo
+*.swn
+*.rvmrc
+*.sql
+/tmp
+.sass-cache
+*.sqlite
+*.bz2
