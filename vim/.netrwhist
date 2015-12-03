@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/esse/work/astarium/hades/lib'
+let g:netrw_dirhist_2='/Users/esse/work/astarium/hades/lib/hades'
+let g:netrw_dirhist_3='/Users/esse/work/astarium/hades'
+let g:netrw_dirhist_4='/Users/esse/work/astarium/koleo'
+let g:netrw_dirhist_5='/Users/esse/work/astarium/koleo/db'
+let g:netrw_dirhist_6='/Users/esse/work/astarium/koleo/db/migrate'
