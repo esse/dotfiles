@@ -16,6 +16,9 @@ set timeoutlen=250          " Time to wait after ESC (default causes an annoying
 set term=xterm-256color
 
 set mouse=a
+:set wrap
+:set linebreak
+:set nolist  " list disables linebreak
 
 " faster!
 set lazyredraw
@@ -69,3 +72,6 @@ filetype plugin indent on
 syntax on
 map <C-w>t :GoTest<CR>
 
+" move through wraped lines
+nnoremap k gk
+nnoremap j gj
