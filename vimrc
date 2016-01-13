@@ -28,6 +28,8 @@ set path=$PWD/**
 
 set pastetoggle=<f5>
 
+map <F6> :set wrap!<cr>
+
 map <C-n> :NERDTreeToggle<CR>
 
 filetype plugin indent on     " required! 
