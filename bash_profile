@@ -65,5 +65,10 @@ extract() {
   fi
 }
 
+fix_test_db() {
+  cat README.md | grep psql | tail -n 1 | bash
+}
+
+export PYTHONSTARTUP=~/.pythonrc
 
 source ~/.dotfiles/secrets/.env
