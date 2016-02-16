@@ -98,3 +98,6 @@ function LargeFile()
  " display message
  autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
 endfunction
+
+map q <Nop>
+" i don't use macros... yet
