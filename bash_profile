@@ -69,6 +69,12 @@ fix_test_db() {
   cat README.md | grep psql | tail -n 1 | bash
 }
 
+open_last_migration() {
+  vim db/migrate/`ls db/migrate/ | tail -n 1`
+}
+
 export PYTHONSTARTUP=~/.pythonrc
 
 source ~/.dotfiles/secrets/.env
+
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
