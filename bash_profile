@@ -70,10 +70,11 @@ fix_test_db() {
 }
 
 open_last_migration() {
-  vim db/migrate/`ls db/migrate/ | tail -n 1`
+  mate db/migrate/`ls db/migrate/ | tail -n 1`
 }
 
 alias be="bundle exec"
+alias r="rake"
 
 export PYTHONSTARTUP=~/.pythonrc
 
