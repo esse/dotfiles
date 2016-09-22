@@ -40,6 +40,11 @@ alias such=git
 alias very=git
 alias wow='git status'
 
+alias gti=git
+
+#recently changed branches, thanks @tjeden
+alias gitc="git branch --sort=-committerdate | head"
+
 # Extra many types of compressed packages
 # Credit: http://nparikh.org/notes/zshrc.txt
 extract() {
