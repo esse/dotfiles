@@ -10,3 +10,4 @@
     ~/.git-completion.bash: git-completion.bash
     ~/.gitignore_global: gitignore_global
     ~/.pythonrc: pythonrc
+    ~/.inputrc: inputrc
