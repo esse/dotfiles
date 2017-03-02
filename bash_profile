@@ -9,7 +9,7 @@ export PATH=$PATH:$GOPATH/bin
 export EDITOR=vim
 
 export TERM=xterm
-
+export WINEPREFIX=/Users/esse/.wine64
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export WKHTMLTOPDF_PATH="/Users/esse/.rvm/gems/ruby-2.2.0/bin/wkhtmltopdf"
@@ -28,12 +28,12 @@ fi
 function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
- 
+
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOR="\[\033[0m\]"
- 
+
 PS1="\u:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
 alias such=git
@@ -41,6 +41,11 @@ alias very=git
 alias wow='git status'
 
 alias gti=git
+
+alias spi="spotify shortinfo"
+alias spp="spotify play/pause"
+alias sppl="spotify play"
+alias sppa="spotify pause"
 
 #recently changed branches, thanks @tjeden
 alias gitc="git branch --sort=-committerdate | head"
@@ -222,3 +227,8 @@ function f() {
 }
 #stuff taken from: https://github.com/paulirish/dotfiles/blob/master/.functions
 
+export DYLD_LIBRARY_PATH=/users/esse/go/src/github.com/cloudson/gitql/libgit2/install/lib
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+. /Users/esse/torch/install/bin/torch-activate
