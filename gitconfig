@@ -1,0 +1,27 @@
+[alias]
+    br = branch
+    ci = commit . -m
+    co = checkout
+    st = status
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = vim
+
+[help]
+    autocorrect = 1
+
+[push]
+	  default = simple
+
+[user]
+    name = Piotr Szmielew
+    email = p.szmielew@ava.waw.pl
+
+[commit]
+    gpgsign = false

@@ -11,3 +11,4 @@
     ~/.gitignore_global: gitignore_global
     ~/.pythonrc: pythonrc
     ~/.inputrc: inputrc
+    ~/.gitconfig: gitconfig

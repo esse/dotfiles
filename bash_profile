@@ -9,7 +9,7 @@ export PATH=$PATH:$GOPATH/bin
 export EDITOR=vim
 
 export TERM=xterm
-
+export WINEPREFIX=/Users/esse/.wine64
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export WKHTMLTOPDF_PATH="/Users/esse/.rvm/gems/ruby-2.2.0/bin/wkhtmltopdf"
@@ -18,7 +18,6 @@ export WKHTMLTOPDF_PATH="/Users/esse/.rvm/gems/ruby-2.2.0/bin/wkhtmltopdf"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ponysay -q
-source /Users/esse/.rvm/scripts/rvm
 source ~/.profile
 
 if [ -f ~/.git-completion.bash ]; then
@@ -28,12 +27,12 @@ fi
 function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
- 
+
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOR="\[\033[0m\]"
- 
+
 PS1="\u:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
 alias such=git
@@ -41,6 +40,11 @@ alias very=git
 alias wow='git status'
 
 alias gti=git
+
+alias spi="spotify shortinfo"
+alias spp="spotify play/pause"
+alias sppl="spotify play"
+alias sppa="spotify pause"
 
 #recently changed branches, thanks @tjeden
 alias gitc="git branch --sort=-committerdate | head"
@@ -204,8 +208,6 @@ cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
-
-
 # git commit browser. needs fzf
 log() {
   git log --graph --color=always \
@@ -222,3 +224,10 @@ function f() {
 }
 #stuff taken from: https://github.com/paulirish/dotfiles/blob/master/.functions
 
+export DYLD_LIBRARY_PATH=/users/esse/go/src/github.com/cloudson/gitql/libgit2/install/lib
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+. /Users/esse/torch/install/bin/torch-activate
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
