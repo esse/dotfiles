@@ -6,7 +6,6 @@
 *.swo
 *.swn
 *.rvmrc
-*.sql
 /tmp
 .sass-cache
 *.sqlite
