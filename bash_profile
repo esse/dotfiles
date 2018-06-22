@@ -1,24 +1,11 @@
-export RUBYMOTION_ANDROID_SDK=/Users/esse/.rubymotion-android/sdk
-export RUBYMOTION_ANDROID_NDK=/Users/esse/.rubymotion-android/ndk
-export DEVKITARM=/Users/esse/devkitPro/devkitARM
-export DEVKITPRO=/Users/esse/devkitPro
 #export PS1="\u:\w$ " #very simple prompt
-export DYLD_LIBRARY_PATH=/usr/local/kde4/lib:
 export GOPATH='/users/esse/go'
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:node_modules/.bin
 export EDITOR=vim
 
 export TERM=xterm
-export WINEPREFIX=/Users/esse/.wine64
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export WKHTMLTOPDF_PATH="/Users/esse/.rvm/gems/ruby-2.2.0/bin/wkhtmltopdf"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 ponysay -q
-source ~/.profile
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
@@ -90,8 +77,6 @@ alias be="bundle exec"
 alias r="rake"
 
 export PYTHONSTARTUP=~/.pythonrc
-
-source ~/.dotfiles/secrets/.env
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
@@ -224,12 +209,18 @@ function f() {
 }
 #stuff taken from: https://github.com/paulirish/dotfiles/blob/master/.functions
 
-export DYLD_LIBRARY_PATH=/users/esse/go/src/github.com/cloudson/gitql/libgit2/install/lib
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-
-. /Users/esse/torch/install/bin/torch-activate
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 alias push-all="git push --all origin -u"
+
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#alias ember="./node_modules/ember-cli/bin/ember"
+#alias eslint="./node_modules/eslint/bin/eslint.js"
